@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { CountryService } from '../../services/country.service';
 
 @Component({
   selector: 'country-details',
@@ -7,13 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./country-details.component.scss'],
 })
 export class CountryDetails {
-  public cards: any;
+  country: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(private countryService: CountryService) {}
 
   ngOnInit() {
-    // this.http.get('https://restcountries.com/v3.1/all').subscribe((res) => {
-    //   this.cards = res;
-    // });
+    this.country = this.countryService.country;
   }
 }

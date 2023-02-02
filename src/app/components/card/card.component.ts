@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-// import { Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { CountryService } from '../../services/country.service';
 
 @Component({
   selector: 'card',
@@ -9,9 +10,10 @@ import { Component, Input } from '@angular/core';
 export class Card {
   @Input() card;
 
-  // constructor(private router: Router) {}
+  // constructor(private router: Router, private countryService: CountryService) {}
 
-  goToCountry(id: number) {
-    // this.router.navigate(['/user', id]);
-  }
+  // goToCountry() {
+  //   this.countryService.country = this.card;
+  //   this.router.navigate(['/country']);
+  // }
 }
