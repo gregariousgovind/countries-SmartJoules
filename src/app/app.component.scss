@@ -1,0 +1,33 @@
+header.project-header {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: var(--text);
+  background-color: var(--bg);
+
+  .header-title,
+  .btn-theme {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  .btn-theme {
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 4px 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline: 1px solid var(--text);
+    }
+  }
+}

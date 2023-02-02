@@ -1,0 +1,9 @@
+ul.cards-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+}

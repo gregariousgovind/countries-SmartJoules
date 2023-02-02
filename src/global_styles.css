@@ -1,1 +1,22 @@
-/* Add application styles & imports to this file! */
+:root {
+  --color-dark: #1d1d1d;
+  --color-light: #ffffff;
+}
+
+.dark {
+  --bg: hsl(209, 23%, 22%);
+  --bg-dark: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+}
+
+.light {
+  --bg: hsl(0, 0%, 100%);
+  --bg-dark: hsl(0, 0%, 98%);
+  --text: hsl(200, 15%, 8%);
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--bg-dark);
+}
