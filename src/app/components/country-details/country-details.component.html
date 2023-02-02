@@ -1,7 +1,7 @@
 <div class="card-details-container">
   <button class="btn btn-back" (click)="goBack()">Back</button>
 
-  <div class="details-container">
+  <div class="details-container" *ngIf="country">
     <div class="image-container">
       <img src="{{ country.flags.png }}" alt="{{ country.flags.alt }}" />
     </div>
@@ -12,13 +12,12 @@
       <p class="population"><b>Population:</b> {{ country.population }}</p>
       <p class="region"><b>Region:</b> {{ country.region }}</p>
       <p class="capital"><b>Capital:</b> {{ country.capital }}</p>
-      <p class="border-countries">
+      <p class="border-countries" *ngIf="country?.borders?.length">
         <b>Border Countries:</b>
-        <ng-container *ngFor="let country of country.borders">
-          <button class="btn">
-            {{ country }}
-          </button>
-        </ng-container>
+
+        <button class="btn" *ngFor="let country of country.borders">
+          {{ country }}
+        </button>
       </p>
     </div>
   </div>

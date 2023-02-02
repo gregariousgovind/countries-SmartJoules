@@ -12,7 +12,6 @@
   .details-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin-top: 40px;
 
     .image-container {
@@ -26,6 +25,8 @@
     }
 
     .details {
+      min-width: fit-content;
+      padding: 10px 20px;
       h3.card-title {
         color: var(--text);
         font-size: 16px;
