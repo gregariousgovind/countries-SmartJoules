@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { CountryCards } from './components/country-cards/country-cards.component';
 import { CountryDetails } from './components/country-details/country-details.component';
 

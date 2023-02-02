@@ -10,10 +10,10 @@ import { CountryService } from '../../services/country.service';
 export class Card {
   @Input() card;
 
-  // constructor(private router: Router, private countryService: CountryService) {}
+  constructor(private router: Router, private countryService: CountryService) {}
 
-  // goToCountry() {
-  //   this.countryService.country = this.card;
-  //   this.router.navigate(['/country']);
-  // }
+  goToCountry() {
+    this.countryService.country = this.card;
+    this.router.navigate(['/country']);
+  }
 }
