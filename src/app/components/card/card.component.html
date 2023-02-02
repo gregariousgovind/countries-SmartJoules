@@ -1,5 +1,15 @@
 <li class="card-container" (click)="goToCountry()">
   <div class="card">
-    <h3 class="card-title">{{ card.name.common }}</h3>
+    <div class="image-container">
+      <img src="{{ card.flags.png }}" alt="{{ card.flags.alt }}" />
+    </div>
+    <div class="card-details">
+      <h3 class="card-title" title="{{ card.name.common }}">
+        {{ card.name.common }}
+      </h3>
+      <p class="population"><b>Population:</b> {{ card.population }}</p>
+      <p class="region"><b>Region:</b> {{ card.region }}</p>
+      <p class="capital"><b>Capital:</b> {{ card.capital }}</p>
+    </div>
   </div>
 </li>

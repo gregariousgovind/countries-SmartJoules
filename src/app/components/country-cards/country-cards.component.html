@@ -1,3 +1,8 @@
-<ul class="cards-list">
-  <card *ngFor="let card of cards" [card]="card"></card>
-</ul>
+<div class="cards-container">
+  <div class="search-input">
+    <input type="text" placeholder="Search" />
+  </div>
+  <ul class="cards-list">
+    <card *ngFor="let card of cards" [card]="card"></card>
+  </ul> 
+</div>
