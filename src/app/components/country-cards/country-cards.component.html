@@ -1,8 +1,13 @@
 <div class="cards-container">
   <div class="search-input">
-    <input type="text" placeholder="Search" />
+    <input
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="searchTerm"
+      (input)="search()"
+    />
   </div>
   <ul class="cards-list">
-    <card *ngFor="let card of cards" [card]="card"></card>
-  </ul> 
+    <card *ngFor="let card of filteredCards" [card]="card"></card>
+  </ul>
 </div>
