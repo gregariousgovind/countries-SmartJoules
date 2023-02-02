@@ -1,2 +1,25 @@
-<button (click)="goBack()">Back</button>
-{{ country.name.common }}
+<div class="card-details-container">
+  <button class="btn btn-back" (click)="goBack()">Back</button>
+
+  <div class="details-container">
+    <div class="image-container">
+      <img src="{{ country.flags.png }}" alt="{{ country.flags.alt }}" />
+    </div>
+    <div class="details">
+      <h3 class="card-title" title="{{ country.name.common }}">
+        {{ country.name.common }}
+      </h3>
+      <p class="population"><b>Population:</b> {{ country.population }}</p>
+      <p class="region"><b>Region:</b> {{ country.region }}</p>
+      <p class="capital"><b>Capital:</b> {{ country.capital }}</p>
+      <p class="border-countries">
+        <b>Border Countries:</b>
+        <ng-container *ngFor="let country of country.borders">
+          <button class="btn">
+            {{ country }}
+          </button>
+        </ng-container>
+      </p>
+    </div>
+  </div>
+</div>
